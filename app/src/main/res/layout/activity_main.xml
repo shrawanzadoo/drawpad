@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="drawpad.ustwo.com.drawpad.MainActivity"
+    android:id="@+id/relativeLayout_parent">
+
+    <drawpad.ustwo.com.drawpad.customPager.CustomViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:context=".MainActivity"
+        android:background="@android:color/background_dark"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true" />
+
+    <io.karim.MaterialTabs
+        android:id="@+id/material_tabs"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?attr/colorPrimary"
+        app:mtIndicatorColor="#8cebebeb"
+        app:mtSameWeightTabs="true"
+        app:mtPaddingMiddle="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/relativeLayout_options"
+        android:background="#88000000">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imageView_clear"
+            android:src="@drawable/clear"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imageView_save"
+            android:src="@drawable/save"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imageView_stroke_color"
+            android:src="@drawable/stroke_color"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignTop="@+id/imageView_clear"
+            android:layout_toLeftOf="@+id/imageView_clear"
+            android:layout_toStartOf="@+id/imageView_clear" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imageView_fill_color"
+            android:src="@drawable/fill_color"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_alignTop="@+id/imageView_clear"
+            android:layout_toRightOf="@+id/imageView_clear"
+            android:layout_toEndOf="@+id/imageView_clear" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/imageView_wallpaper"
+            android:src="@drawable/wallpaper"
+            android:layout_marginRight="25dp"
+            android:layout_alignTop="@+id/imageView_clear"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/imageButton_toggle_menu"
+        android:src="@drawable/collapse"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:background="#88000000"
+        android:visibility="visible" />
+
+</RelativeLayout>
